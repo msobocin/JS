@@ -14,7 +14,7 @@ if (!$result) {
     die($message);
 }
 	
-echo "<select name=\"municipi\" >";
+echo "<select name=\"municipi\" onchange=\"wiki(this)\">";
 while ($row = mysql_fetch_assoc($result)) {
 	echo "<option value=".$row['id_mun'].">".$row['municipi']."</option>";
 }

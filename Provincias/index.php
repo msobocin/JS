@@ -95,6 +95,14 @@ while ($row = mysql_fetch_assoc($result)) {
 </div>
 <div id="info">
 </div>
+<iframe src="http://www.wikipedia.com" id="wikipedia" width="1000" height="600"></iframe>
+<script>
+function wiki(e){
+	var wikipedia=document.getElementById("wikipedia");
+	console.log(e.options[e.selectedIndex].text);
+	wikipedia.src = "http://es.wikipedia.org/wiki/"+e.options[e.selectedIndex].text;
+}
+</script>
 </body>
 </html>
 <?php include("close_db.php"); ?>
